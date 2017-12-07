@@ -1,5 +1,188 @@
+@font-face{
+    font-family:'Arvo';
+    src:url('ainsliesansnormregular-webfont.ttf')
+}
+
+
+html, body {
+    font-family: 'Arvo', Verdana;
+}
+
 .container-bg {
-background-image: url("../banner.png");
+    background-image: url("../images/banner4.jpg");
     background-repeat:no-repeat;
     height:700px;
+    position:relative;
+}
+
+.web {
+    color:#51DEB7;
+    font-weight:600;
+}
+
+.dev {
+    color:#5268C1;
+    font-weight:600;
+}
+
+.cons {
+    color:#14BCDE;
+    font-weight:600;
+}
+
+.top-buffer {
+    margin-top:20px;
+}
+
+.top-margin {
+    margin-top:250px;
+}
+
+.margin-bot {
+    margin-bottom:15px;
+}
+
+.top-buffer2 {
+    margin-top:100px;
+}
+
+.features {
+    margin-top:40px;
+    font-weight:1000;
+}
+
+.about {
+    line-height:200%;
+    margin:50px 150px;
+    font-size:14px;
+}
+
+.buton {
+    display: block; 
+    margin: 0 auto;
+    margin-top:35px;
+    color:white;
+    background-color:#51DEB7;
+    border:none;
+    
+}
+
+.buton:hover {
+    background-color:#51DEB7;
+}
+
+.mgcol {
+    margin-top:40px;
+}
+
+.mgtext {
+    margin : 0 100px 0 70px;
+}
+
+.mgtextd {
+    margin: 0 100px 0 40px;
+}
+
+.mrg {
+    
+    margin : 50px;
+}
+
+.mv1 {
+    background-color:#5268C1;
+}
+
+.verde {
+    background-color: #51DEB7;
+}
+
+.albastru {
+    background-color: #14BCDE;
+}
+
+.imgdiv1 {
+    background-image:url("../images/bk1.jpg");
+    width:400px;
+    height:400px;
+}
+
+.imgdiv2 {
+    background-image:url("../images/bk2.jpg");
+    width:400px;
+    height:400px;
+}
+
+.imgdiv3 {
+    background-image:url("../images/bk3.jpg");
+}
+
+.mrgl {
+    margin-left:110px;
+}
+
+.mgtext2 {
+    margin: 0 200px;
+}
+
+input[type="text"], textarea {
+
+  background-color : #d1d1d1; 
+  height:80px;
+  width:1000px;
+
+}
+
+input[type="email"]{
+
+  background-color : #ebebeb;
+  height:80px;
+    width:1000px;
+
+}
+
+input[type="text"]{
+
+  background-color : #ebebeb; 
+    width:1000px;
+
+}
+
+.back {
+    background-color:#ebebeb;
+    width:1000px;
+    height:400px;
+}
+
+::-webkit-input-placeholder{
+   font-weight: 800;
+    font-size:1.5em;
+}
+
+footer {
+    background-color:black;
+    margin-top:100px;
+    height:100px;
+    width:100%;
+}
+
+.cpr {
+    margin-left:50px;
+    margin-top:40px;
+}
+
+.pdd{
+    padding-left:150px;
+}
+
+.wbs {
+    background-color:#14bcde;
+}
+
+.dropdown-menu ul{
+    float: left;
+    margin-right:15px;
+}
+
+.txt {
+    margin: 10px 20px 0 20px;
 }
