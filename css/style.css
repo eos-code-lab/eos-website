@@ -8,11 +8,32 @@ html, body {
     font-family: 'Arvo', Verdana;
 }
 
-.container-bg {
+.background-header {
     background-image: url("../images/banner4.jpg");
     background-repeat:no-repeat;
     height:700px;
-    position:relative;
+}
+
+.float-left {
+    float: left;
+}
+
+.green-line {
+    background:#51DEB7;
+    height:4px;
+    width:10%
+}
+
+.mov-line {
+    background:#5268C1;
+    height:4px;
+    width:5%;
+}
+
+.blue-line {
+    background:#14BCDE;
+    height:4px;
+    width:5%
 }
 
 .web {
