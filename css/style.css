@@ -8,239 +8,145 @@ html, body {
     font-family: 'My-font', Verdana;
 }
 
-.background-header {
-    background-image: url("../images/banner4.jpg");
-    background-repeat:no-repeat;
-    height:700px;
-}
-
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float:right;
-}
-
-.green-line {
-    background:#51DEB7;
-    height:0.5%;
-    width:10%
-}
-
-.mov-line {
-    background:#5268C1;
-    height:2px;
-    width:5%;
-}
-
-.blue-line {
-    background:#14BCDE;
-    height:2px;
-    width:5%
-}
-
-.web {
-    color:#51DEB7;
-    font-weight:600;
-}
-
-.dev {
-    color:#5268C1;
-    font-weight:600;
-}
-
-.cons {
-    color:#14BCDE;
-    font-weight:600;
-}
-
-.top-buffer {
-    margin-top:3%;
-}
-
-.top-margin {
-    margin-top:30%;
-}
-
-.top-buffer2 {
-    margin-top:7%;
-}
-
-.features {
-    margin-top:10%;
-    font-weight:1000;
-}
-
-.about {
-    line-height:200%;
-    margin:5% 9%;
-    font-size:14px;
-}
-
-.buton {
-    display: block; 
-    margin: 0 auto;
-    margin-top:3%;
-    color:white;
-    background-color:#51DEB7;
-    border:none;
-    
-}
-
-.buton:hover {
-    background-color:#51DEB7;
-}
-
-.mgcol {
-    margin-top:2%;
+.eos-navbar {
+    z-index: 20;
+    background: #000000;
+    background: rgba(0,0,0,0.3);
 }
 
 
-.textd {
-    margin: 0 20% 0 10%;
+.eos-navbar a {
+    color: #ffffff;
 }
 
-.works-margin {
-    
-    margin:5%;
+.eos-navbar > a.nav-link {
+    color: #ffffff;
 }
 
-.mv1 {
-    background-color:#5268C1;
+.footer {
+    height: 80px;
+    background-color: #000000;
+    margin-top: 20px;
 }
 
-.verde {
+.footer > .container-fluid{
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 15px;
+}
+
+.footer a {
+    color: #ffffff;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+#eos-carousel {
+    margin-top: -100px;
+}
+
+/* Carousel base class */
+/*.carousel {*/
+    /*margin-bottom: 4rem;*/
+/*}*/
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    z-index: 10;
+    bottom: 10rem;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+    height: 50rem;
+    background-color: #777;
+}
+.carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 50rem;
+}
+
+.green {
+    color: #51DEB7;
+}
+
+.green-background {
     background-color: #51DEB7;
 }
 
-.albastru {
-    background-color: #14BCDE;
+.green-line {
+    background: #51DEB7;
+    height: 2px;
+    width: 5%;
 }
 
-.imgdiv1 {
-    background-image:url("../images/bk1.jpg");
-    width:400px;
-    height:400px;
+.mov {
+    color: #5268C1;
 }
 
-.imgdiv2 {
-    background-image:url("../images/bk2.jpg");
-    width:400px;
-    height:400px;
+.mov-background {
+    background-color: #5268C1;
 }
 
-.imgdiv3 {
-    background-image:url("../images/bk3.jpg");
+.mov-line {
+    background: #5268C1;
+    height: 2px;
+    width: 5%;
 }
 
-.margin-read-more {
-    margin-left:32%;
+.blue {
+    color: #14BCDE;
 }
 
-.text-margin2 {
-    margin: 0 20%;
+.blue-background {
+    background: #14BCDE;
 }
 
-input[type="text"], textarea {
+.blue-line {
+    background: #14BCDE;
+    height: 2px;
+    width: 5%;
+}
 
-  background-color : #d1d1d1; 
-  height:10%;
-  width:90%;
+.section {
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+.inner-section {
+    padding-top: 15%;
+    padding-bottom: 10%;
+}
+
+.small-inner-section {
+    padding-top: 5%;
+    padding-bottom: 2.5%;
+}
+
+.business-background {
 
 }
 
-input[type="email"]{
-
-  background-color : #ebebeb;
-  height:10%;
-    width:90%;
-
+input.form-control {
+    background-color: #ebebeb;
 }
 
-input[type="text"]{
-
-  background-color : #ebebeb; 
-    width:90%;
-
+textarea.form-control  {
+    background-color: #ebebeb;
 }
 
-.back {
-    background-color:#ebebeb;
-    width:1000px;
-    height:400px;
+.padding-all {
+    padding: 15%;
 }
 
-::-webkit-input-placeholder{
-   font-weight: 800;
-    font-size:1.5em;
+.padding-sides {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-footer {
-    background-color:black;
-    margin-top:100px;
-    height:100px;
-    width:100%;
-}
-
-.cpr {
-    margin-left:3%;
-    margin-top:2%;
-}
-
-.wbs {
-    background-color:#14bcde;
-}
-
-.dropdown-menu ul{
-    float: left;
-    margin-right:15px;
-}
-
-.txt {
-    margin-left:20%;
-    margin-right:20%;
-    margin-top:3%;
-}
-
-.logo {
-    margin-top:3%;
-}
-
-.logo-text {
-    margin-top:5%;
-}
-
-.margin0 {
-    margin:0;
-    padding:0;
-}
-
-h6{
-    padding-left:10%;
-    padding-top:3%; 
-}
-
-.l-logo{
-    position:absolute;
-}
-
-.texts {
-    padding: 0 20% 0 10%;
-}
-
-.top-pad {
-    padding-top:15%;
-}
-
-.top-pad-logo {
-    padding-top:12%;
-}
-
-.mrg{
-    margin:15%;
-}
-
-.estimate {
-    margin-right:10%;
+a.text-white.float-right.padding-all {
+    text-decoration: none;
 }
