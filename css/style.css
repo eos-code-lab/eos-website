@@ -1,11 +1,11 @@
 @font-face{
-    font-family:'Arvo';
+    font-family:'My-font';
     src:url('ainsliesansnormregular-webfont.ttf')
 }
 
 
 html, body {
-    font-family: 'Arvo', Verdana;
+    font-family: 'My-font', Verdana;
 }
 
 .background-header {
@@ -18,21 +18,25 @@ html, body {
     float: left;
 }
 
+.float-right {
+    float:right;
+}
+
 .green-line {
     background:#51DEB7;
-    height:4px;
+    height:0.5%;
     width:10%
 }
 
 .mov-line {
     background:#5268C1;
-    height:4px;
+    height:2px;
     width:5%;
 }
 
 .blue-line {
     background:#14BCDE;
-    height:4px;
+    height:2px;
     width:5%
 }
 
@@ -52,36 +56,32 @@ html, body {
 }
 
 .top-buffer {
-    margin-top:20px;
+    margin-top:3%;
 }
 
 .top-margin {
-    margin-top:250px;
-}
-
-.margin-bot {
-    margin-bottom:15px;
+    margin-top:30%;
 }
 
 .top-buffer2 {
-    margin-top:100px;
+    margin-top:7%;
 }
 
 .features {
-    margin-top:40px;
+    margin-top:10%;
     font-weight:1000;
 }
 
 .about {
     line-height:200%;
-    margin:50px 150px;
+    margin:5% 9%;
     font-size:14px;
 }
 
 .buton {
     display: block; 
     margin: 0 auto;
-    margin-top:35px;
+    margin-top:3%;
     color:white;
     background-color:#51DEB7;
     border:none;
@@ -93,20 +93,17 @@ html, body {
 }
 
 .mgcol {
-    margin-top:40px;
+    margin-top:2%;
 }
 
-.mgtext {
-    margin : 0 100px 0 70px;
+
+.textd {
+    margin: 0 20% 0 10%;
 }
 
-.mgtextd {
-    margin: 0 100px 0 40px;
-}
-
-.mrg {
+.works-margin {
     
-    margin : 50px;
+    margin:5%;
 }
 
 .mv1 {
@@ -137,34 +134,34 @@ html, body {
     background-image:url("../images/bk3.jpg");
 }
 
-.mrgl {
-    margin-left:110px;
+.margin-read-more {
+    margin-left:32%;
 }
 
-.mgtext2 {
-    margin: 0 200px;
+.text-margin2 {
+    margin: 0 20%;
 }
 
 input[type="text"], textarea {
 
   background-color : #d1d1d1; 
-  height:80px;
-  width:1000px;
+  height:10%;
+  width:90%;
 
 }
 
 input[type="email"]{
 
   background-color : #ebebeb;
-  height:80px;
-    width:1000px;
+  height:10%;
+    width:90%;
 
 }
 
 input[type="text"]{
 
   background-color : #ebebeb; 
-    width:1000px;
+    width:90%;
 
 }
 
@@ -187,12 +184,8 @@ footer {
 }
 
 .cpr {
-    margin-left:50px;
-    margin-top:40px;
-}
-
-.pdd{
-    padding-left:150px;
+    margin-left:3%;
+    margin-top:2%;
 }
 
 .wbs {
@@ -205,5 +198,49 @@ footer {
 }
 
 .txt {
-    margin: 10px 20px 0 20px;
+    margin-left:20%;
+    margin-right:20%;
+    margin-top:3%;
+}
+
+.logo {
+    margin-top:3%;
+}
+
+.logo-text {
+    margin-top:5%;
+}
+
+.margin0 {
+    margin:0;
+    padding:0;
+}
+
+h6{
+    padding-left:10%;
+    padding-top:3%; 
+}
+
+.l-logo{
+    position:absolute;
+}
+
+.texts {
+    padding: 0 20% 0 10%;
+}
+
+.top-pad {
+    padding-top:15%;
+}
+
+.top-pad-logo {
+    padding-top:12%;
+}
+
+.mrg{
+    margin:15%;
+}
+
+.estimate {
+    margin-right:10%;
 }
