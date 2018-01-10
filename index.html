@@ -14,10 +14,10 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body itemscope itemtype="http://schema.org/LocalBusiness">
         <nav class="navbar fixed-top navbar-expand-md eos-navbar navbar-toggleable">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.png" class="d-inline-block" alt="EOS CODE LAB"><span>CODE LAB</span>
+            <a class="navbar-brand" href="#" itemprop="url">
+                <img itemprop ="logo" src="https://i.imgur.com/1P79ead.png" class="d-inline-block" alt="EOS CODE LAB"><span>CODE LAB</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,12 +56,12 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                    <img class="first-slide" src="./images/carousel/slide-different.jpg" alt="First slide">
+                    <img itemprop ="image" class="first-slide" src="./images/carousel/slide-different.jpg" alt="First slide">
                     <div class="container">
                         <div class="carousel-caption d-none d-md-block">
                             <h1 class="text-uppercase"><strong>ENJOY THE DIFFERENT</strong></h1>
                             <hr class="green-line"/>
-                            <p>We create outstanding websites &amp; apps</p>
+                            <p><span itemprop="description">We create outstanding websites &amp; apps</span></p>
                         </div>
                     </div>
                 </div>
@@ -268,6 +268,7 @@
                     <div class="form-group">
                         <textarea rows="6" name="message" id="message" class="form-control back" required="" placeholder ="MESSAGE"></textarea>
                     </div>
+                    <div class="g-recaptcha" data-sitekey="6LeJJkAUAAAAAAK1AeHyzPdYnkZIkA5uL-v7JC6U"></div>
                     <button type="submit" class="btn btn-lg button text-white blue-background"><strong>Send Message</strong></button>
                 </fieldset>
             </form>
@@ -281,7 +282,7 @@
             <div class="container-fluid">
                 <div class="d-flex justify-content-start">
                     <p class="p-2">
-                        <small><strong>&copy; 2017 EOS Code Lab. All Rights Reserved.</strong></small>
+                        <small><strong>&copy; 2017 <span itemprop="name">EOS Code Lab</span>. All Rights Reserved.</strong></small>
                     </p>
                     <div class="ml-auto p-2">
                         <ul class="list-inline">
@@ -295,9 +296,10 @@
         </footer>
 
         <!--end footer-->
-
+        
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </body>
 </html>
