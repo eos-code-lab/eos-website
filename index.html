@@ -251,25 +251,25 @@
         <!--end our work-->
 
         <!--start contact form-->
-        <div id="contact-us" class="container section">
+        <div id="contact-us" class="container section" class="contact-form">
             <h3 class="text-center"><strong>CONTACT US</strong></h3>
             <hr class="blue-line" />
             <br>
             <p class="h6 text-center">ASK US FOR AN ESTIMATE</p>
             <p class="text-center">Tell us about the project you want to accomplish and you will receive an estimate that meets your needs and your budget.</p>
-            <form class="form" role="form" autocomplete="off">
+            <form class="form" role="form" autocomplete="off" action="store.php" method="POST">
                 <fieldset class="text-center">
                     <div class="form-group">
-                        <input type="text" name="name" id="name" class="form-control" required="" placeholder="YOUR NAME">
+                        <input type="text" name="name" id="name" class="form-control" required="required" placeholder="YOUR NAME">
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" id="email" class="form-control" required="" placeholder="EMAIL">
+                        <input type="email" name="email" id="email" class="form-control" required="required" placeholder="EMAIL">
                     </div>
                     <div class="form-group">
-                        <textarea rows="6" name="message" id="message" class="form-control back" required="" placeholder ="MESSAGE"></textarea>
+                        <textarea rows="6" name="message" id="message" class="form-control back" required="required" placeholder ="MESSAGE"></textarea>
                     </div>
                     <div class="g-recaptcha" data-sitekey="6LeJJkAUAAAAAAK1AeHyzPdYnkZIkA5uL-v7JC6U"></div>
-                    <button type="submit" class="btn btn-lg button text-white blue-background"><strong>Send Message</strong></button>
+                    <button type="submit" name="submit" class="btn btn-lg button text-white blue-background"><strong>Send Message</strong></button>
                 </fieldset>
             </form>
         </div>
