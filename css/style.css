@@ -61,7 +61,7 @@ html, body {
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
     z-index: 10;
-    bottom: 10rem;
+    bottom: 15rem;
 }
 
 /* Declare heights because of positioning of img element */
@@ -125,8 +125,8 @@ html, body {
 }
 
 .inner-section {
-    padding-top: 15%;
-    padding-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .small-inner-section {
@@ -157,4 +157,26 @@ textarea.form-control  {
 
 a.text-white.float-right.padding-all {
     text-decoration: none;
+}
+
+.section-inner {
+    text-align: center;
+}
+
+.partners {
+    display: flex;
+    justify-content: center;
+}
+
+.partners a {
+    padding: 0 1em;
+    border-right: 1px solid #ddd;
+}
+
+.partners img {
+    max-width: 20rem;
+}
+
+.partners a:last-child {
+    border-right: 0;
 }
