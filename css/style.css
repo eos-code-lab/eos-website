@@ -8,6 +8,14 @@ html, body {
     font-family: 'My-font', Verdana;
 }
 
+.module.hero {
+    max-width: 100% !important;
+    padding: 530px 80% 30px 10%;
+    text-align: center;
+    background: #fff;
+    background-size: cover;
+}
+
 .eos-navbar {
     z-index: 20;
     background: #000000;
@@ -62,6 +70,7 @@ html, body {
 .carousel-caption {
     z-index: 10;
     bottom: 15rem;
+    text-shadow: 2px 2px #000000;
 }
 
 /* Declare heights because of positioning of img element */
@@ -126,16 +135,12 @@ html, body {
 
 .inner-section {
     padding-top: 5%;
-    padding-bottom: 5%;
 }
 
 .small-inner-section {
-    padding-top: 5%;
-    padding-bottom: 2.5%;
-}
-
-.business-background {
-
+    padding-top: 3%;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 input.form-control {
@@ -147,7 +152,12 @@ textarea.form-control  {
 }
 
 .padding-all {
-    padding: 15%;
+    padding: 10%;
+}
+
+.margin-sides {
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .padding-sides {
@@ -159,24 +169,22 @@ a.text-white.float-right.padding-all {
     text-decoration: none;
 }
 
-.section-inner {
-    text-align: center;
-}
-
-.partners {
-    display: flex;
-    justify-content: center;
-}
-
-.partners a {
-    padding: 0 1em;
-    border-right: 1px solid #ddd;
-}
-
 .partners img {
-    max-width: 20rem;
+    max-width: 15rem;
 }
 
-.partners a:last-child {
-    border-right: 0;
+.fa-features-icons {
+    color: #51deb7;
+    margin-right: 1.5rem!important;
+}
+
+@media (min-width: 1200px) {
+    #our-partners > div.row.no-gutters > div {
+        padding: 0 1em;
+        border-right: 1px solid #ddd;
+    }
+
+    #our-partners > div.row.no-gutters > div:last-child {
+        border-right: 0;
+    }
 }
