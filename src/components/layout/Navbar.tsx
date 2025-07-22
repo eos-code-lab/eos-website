@@ -21,7 +21,7 @@ const Navbar = () => {
                     <a className="nav-link" href="#our-partners"><strong>PARTNERS</strong></a>
                     </li>
                     <li className ="nav-item">
-                        <a className="nav-link" href="#contact-us"><strong>LET'S TALK</strong></a>
+                        <a className="nav-link" href="#contact-us"><strong>LET`S TALK</strong></a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" target="_blank" href="https://www.facebook.com/EOSCodeLab/"><i className="fab fa-facebook-f"></i></a>
