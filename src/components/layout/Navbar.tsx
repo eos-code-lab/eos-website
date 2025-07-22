@@ -1,8 +1,8 @@
 // Navigation bar
 
 const Navbar = () => {
-    return(
-<nav className="navbar fixed-top navbar-expand-md eos-navbar">
+    return (
+        <nav className="navbar fixed-top navbar-expand-md eos-navbar">
             <a className="navbar-brand" href="#">
                 <img src="images/logo.png" className="d-inline-block" alt="EOS CODE LAB"/><span>CODE LAB</span>
             </a>
@@ -34,7 +34,8 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
-        </nav>)
+        </nav>
+    )
 }
 
  export default Navbar;
