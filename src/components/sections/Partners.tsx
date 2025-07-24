@@ -16,7 +16,7 @@ const Partners = () => {
       </h2>
       <hr className="border-t-4 border-sky-500 my-3 w-[5%] mx-auto" />
       
-      <div className="flex flex-col md:flex-row items-center ml-20 mr-20">
+      <div className="flex flex-col md:flex-row justify-between ml-20 mr-20">
         {partnerItem.images.map((img) => (
           <a
             key={img.id}
