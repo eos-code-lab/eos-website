@@ -10,11 +10,13 @@ export default function Home() {
   return (
     <main>
       <HeroCarousel />
+      <div className="bg-white">
       <Services />
       <OurStory />
       <Features />
       <Partners />
       <Contact />
+      </div>
     </main>
   );
   // return (
