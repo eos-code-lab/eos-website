@@ -42,7 +42,7 @@ const serviceItems = [
 
 const Services = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between text-stone-500 gap-4 p-6">
+    <div id="services" className="flex flex-col md:flex-row justify-between text-stone-500 gap-4 p-6">
       {serviceItems.map((item) => (
         <div key={item.id} className="md:basis-1/3 text-center">
           <img

@@ -27,7 +27,7 @@
 
     const OurStory = () => {
     return (
-        <div className="flex flex-col md:flex-row justify-between text-stone-500">
+        <div id="best-of" className="flex flex-col md:flex-row justify-between text-stone-500">
         <div className="md:basis-1/2">
         <h2 className="text-center text-2xl font-bold text-black">
             {ourStoryItem.title}
