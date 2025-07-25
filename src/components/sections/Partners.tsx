@@ -15,7 +15,7 @@ const Partners = () => {
       </h2>
       <hr className="border-t-4 w-[3%] mx-auto my-4 mov" />
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center mx-50 partners img">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center partners img">
         {partnerItem.images.map((img) => (
           <a
             key={img.id}
