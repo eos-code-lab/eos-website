@@ -3,20 +3,19 @@ const partnerItem = {
   images: [
     { id: 1, image: '/images/partners/terrasigna.png', link: 'http://www.terrasigna.com/'},
     { id: 2, image: '/images/partners/eaudeweb.png', link: 'http://www.eaudeweb.ro//' },
-    { id: 3, image: '/images/partners/kentron.png', link: 'http://www.kentron.ro/'},
-    { id: 4, image: '/images/partners/aquavita.png', link: 'http://www.aqv.ro/'},
+    { id: 3, image: '/images/partners/aquavita.png', link: 'http://www.aqv.ro/'},
   ],
 };
 
 const Partners = () => {
   return (
-    <div id="our-partners" className="text-center">
-      <h2 className="text-2xl md:text-3xl font-bold text-black mb-2">
+    <section id="our-partners" className="text-center container mx-auto px-4 py-16">
+      <h2 className="text-2xl md:text-2xl font-bold text-black mb-2">
         {partnerItem.title}
       </h2>
-      <hr className="border-t-4 border-sky-500 my-3 w-[5%] mx-auto" />
+      <hr className="border-t-4 w-[3%] mx-auto my-4 mov" />
       
-      <div className="flex flex-col md:flex-row justify-between ml-20 mr-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center mx-50 partners img">
         {partnerItem.images.map((img) => (
           <a
             key={img.id}
@@ -27,12 +26,12 @@ const Partners = () => {
             <img
               src={img.image}
               alt={`Partner ${img.id}`}
-              className="md:basis-1/4 object-contain"
+              className="object-contain"
             />
           </a>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -4,6 +4,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // Define the carousel items
 const carouselItems = [
@@ -12,21 +13,21 @@ const carouselItems = [
     image: '/images/carousel/no-man.png',
     title: 'Where no man has gone before',
     subtitle: 'We create outstanding websites and apps',
-    lineColor: 'bg-green-500' // green-line
+    lineColor: 'green' // green-line
   },
   {
     id: 2,
     image: '/images/carousel/great-things.png',
     title: 'We love when we are the best',
     subtitle: 'And we create amazing things',
-    lineColor: 'bg-purple-500' // mov-line
+    lineColor: 'mov' // mov-line
   },
   {
     id: 3,
     image: '/images/carousel/stars-view.png',
     title: 'See the world from the stars point of view',
     subtitle: 'And you can get better and better',
-    lineColor: 'bg-blue-500' // blue-line
+    lineColor: 'blue' // blue-line
   }
 ];
 
@@ -101,7 +102,7 @@ const HeroCarousel = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold uppercase mb-4">
               {item.title}
             </h1>
-            <hr className={`w-24 h-1 ${item.lineColor} mx-auto mb-4`} />
+            <hr className={`border-t-4 w-[5%] mx-auto my-2 ${item.lineColor}`} />
             <h5 className="text-lg md:text-xl lg:text-2xl">
               {item.subtitle}
             </h5>
@@ -115,7 +116,7 @@ const HeroCarousel = () => {
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`mx-1 h-3 w-3 rounded-full ${
+            className={`mx-1 h-1 w-6 rounded-sm hover:bg-stone-300 ${
               index === activeSlide ? 'bg-white' : 'bg-white bg-opacity-50'
             }`}
             aria-label={`Go to slide ${index + 1}`}
@@ -123,25 +124,21 @@ const HeroCarousel = () => {
         ))}
       </div>
       
-      {/* Carousel controls */}
-      <button
-        className="absolute left-4 top-1/2 z-20 -translate-y-1/2 bg-black bg-opacity-30 p-2 text-white hover:bg-opacity-50 rounded-full"
-        onClick={prevSlide}
-        aria-label="Previous slide"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-        </svg>
-      </button>
-      <button
-        className="absolute right-4 top-1/2 z-20 -translate-y-1/2 bg-black bg-opacity-30 p-2 text-white hover:bg-opacity-50 rounded-full"
-        onClick={nextSlide}
-        aria-label="Next slide"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-        </svg>
-      </button>
+  <button
+    className="absolute left-4 top-1/2 z-20 -translate-y-1/2 p-3 text-white hover:text-stone-300"
+    onClick={prevSlide}
+    aria-label="Previous slide"
+  >
+    <i className="fas fa-chevron-left text-xl"></i>
+  </button>
+
+  <button
+    className="absolute right-4 top-1/2 z-20 -translate-y-1/2  p-3 text-white hover:text-stone-300"
+    onClick={nextSlide}
+    aria-label="Next slide"
+  >
+    <i className="fas fa-chevron-right text-xl"></i>
+  </button>
     </div>
   );
 };

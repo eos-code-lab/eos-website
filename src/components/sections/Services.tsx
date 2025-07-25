@@ -1,4 +1,7 @@
 // Services section
+import '@/styles/global.css';
+import '@/styles/style.css';
+
 const serviceItems = [
   {
     id: 1,
@@ -11,7 +14,7 @@ const serviceItems = [
     We deliver ready to use and intuitive design services for websites, brand logos, eCommerce
     stores and enterprise software. Let us help you harness the "power of UX/UI design services"
     and create experiences that your customers will love!`,
-    color: 'text-green-300'
+    color: 'green'
   },
   {
     id: 2,
@@ -25,7 +28,7 @@ const serviceItems = [
     software maintenance. We transform products and services through software innovation,
     build web platforms that leverage latest technologies (machine learning, IoT, blockchain)
     and help companies execute big ideas at the speed of light.`,
-    color: 'text-blue-500'
+    color: 'mov'
   },
   {
     id: 3,
@@ -36,24 +39,28 @@ const serviceItems = [
     this is the best way to get exactly the expertise you need without hiring a permanent team.
     Our IT consultants work carefully with you in order to maximise the effectiveness and
     business impact of your project, helping you meet business objectives and fix problems.`,
-    color: 'text-sky-400'
+    color: 'blue'
   }
 ];
 
 const Services = () => {
   return (
-    <div id="services" className="flex flex-col md:flex-row justify-between text-stone-500 gap-4 p-6">
+    <div id="services" className="py-16 px-4">
+      <h2 className="text-3xl font-bold text-center uppercase mb-2 text-black">Services</h2>
+      <hr className="border-t-4 my-6 w-[3%] mx-auto mov" />
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-stone-500">
       {serviceItems.map((item) => (
         <div key={item.id} className="md:basis-1/3 text-center">
           <img
             src={item.image}
             alt={`${item.title} image`}
-            className="block mx-auto rounded"
+            className=" mx-auto"
           />
-          <h4 className={`${item.color} font-bold`}>{item.title}</h4>
+          <h4 className={`font-bold text-2xl ${item.color}`}>{item.title}</h4>
           <p>{item.description}</p>
         </div>
       ))}
+      </div>
     </div>
   );
 };

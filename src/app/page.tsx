@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main>
       <HeroCarousel />
-      <div className="bg-white space-y-16">
+      <div className="bg-white">
       <Services />
       <OurStory />
       <Features />

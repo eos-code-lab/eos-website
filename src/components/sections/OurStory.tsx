@@ -27,12 +27,12 @@
 
     const OurStory = () => {
     return (
-        <div id="best-of" className="flex flex-col md:flex-row justify-between text-stone-500">
-        <div className="md:basis-1/2">
+        <section id="best-of" className="flex flex-col md:flex-row justify-between text-stone-500 py-16 mx-auto px-4">
+        <div className="w-full md:w-1/2 text-center md:text-left p-6 md:pr-12 flex flex-col justify-center">
         <h2 className="text-center text-2xl font-bold text-black">
             {ourStoryItem.title}
             </h2>
-            <hr className="border-t-4 border-green-500 my-3 w-[5%] mx-auto" />
+            <hr className="border-t-4 my-3 w-[5%] mx-auto green" />
             <ul className="space-y-4 text-center">
             {ourStoryItem.description.map((item) => (
                 <li key={item.id} className="text-base ml-8 mr-8">
@@ -42,14 +42,14 @@
             </ul>
         </div>
 
-        <div className="md:basis-1/2">
+        <div className="w-full md:w-1/2 relative min-h-[300px] md:min-h-[500px]">
             <img
             src={ourStoryItem.image}
             alt="Our Story"
             className="w-full"
             />
         </div>
-        </div>
+        </section>
     );
     };
 

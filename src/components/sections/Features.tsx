@@ -50,8 +50,8 @@ const featureItems = {
 
 const Features = () => {
   return (
-      <div className="flex flex-col md:flex-row items-center gap-8">
-        <div className="md:basis-1/2">
+    <section className="flex flex-col md:flex-row justify-between text-stone-500 py-16 mx-auto px-4">
+        <div className="hidden md:block w-full md:w-1/2 relative min-h-[300px] md:min-h-[500px]">
           <img
             src={featureItems.image}
             alt="Our Features"
@@ -59,14 +59,14 @@ const Features = () => {
           />
         </div>
 
-        <div className="md:basis-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="w-full md:w-1/2 p-4 grid grid-cols-1 md:grid-cols-2 gap-6">
           {featureItems.items.map((item) => (
             <div 
               key={item.id}
               className="text-center"
             >
-             <div className="flex items-start gap-4">
-                <span className="text-blue-500 mt-1">
+             <div className="flex-shrink-0 mr-4 text-green-500 green">
+                <span className="mt-1">
                  <i className={`fas ${item.icon} fa-2x`}></i>
                 </span>
             <div>
@@ -77,7 +77,7 @@ const Features = () => {
             </div>
           ))}
         </div>
-      </div>
+      </section>
   );
 };
 

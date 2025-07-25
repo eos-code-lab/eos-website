@@ -2,9 +2,9 @@
 
 const Contact = () => {
   return (
-    <div id="contact-us" className="text-center py-10 px-4">
-      <h3 className="text-2xl font-bold text-black mb-2">CONTACT US</h3>
-      <hr className="border-t-4 border-blue-500 w-[5%] mx-auto my-4" />
+    <section id="contact-us" className="text-center py-10 px-4">
+      <h3 className="text-2xl md:text-2xl font-bold text-black mb-2">CONTACT US</h3>
+      <hr className="border-t-4 w-[3%] mx-auto my-4 blue" />
 
       <p className="text-black">ASK US FOR AN ESTIMATE</p>
       <p className="mb-2 text-black">
@@ -25,7 +25,7 @@ const Contact = () => {
           +40-745-940-499
         </a>
       </p>
-    </div>
+    </section>
   );
 };
 
