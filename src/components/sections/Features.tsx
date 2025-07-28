@@ -50,16 +50,21 @@ const featureItems = {
 
 const Features = () => {
   return (
-    <section className="flex flex-col md:flex-row justify-between text-stone-500 py-16 mx-auto px-4">
-        <div className="hidden md:block w-full md:w-1/2 relative min-h-[300px] md:min-h-[500px]">
-          <img
-            src={featureItems.image}
-            alt="Our Features"
-            className="w-full"
-          />
-        </div>
+    <section id="features" className="py-16 bg-white">
+         <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row">
+            <div className='hidden md:block w-full md:w-1/2 relative min-h-[400px] mt-30'>  
+            <img
+              src={featureItems.image}
+              alt="Our Features"
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            </div>
+      
 
-        <div className="w-full md:w-1/2 p-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="w-full md:w-1/2 p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {featureItems.items.map((item) => (
             <div 
               key={item.id}
@@ -76,6 +81,9 @@ const Features = () => {
             </div>
             </div>
           ))}
+          </div>
+        </div>
+        </div>
         </div>
       </section>
   );

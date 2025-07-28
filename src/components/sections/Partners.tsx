@@ -9,7 +9,8 @@ const partnerItem = {
 
 const Partners = () => {
   return (
-    <section id="our-partners" className="text-center container mx-auto px-4 py-16">
+    <section id="our-partners" className="py-16 bg-gray-50">
+      <div className="text-center container mx-auto px-4 ">
       <h2 className="text-2xl md:text-2xl font-bold text-black mb-2">
         {partnerItem.title}
       </h2>
@@ -30,6 +31,7 @@ const Partners = () => {
             />
           </a>
         ))}
+      </div>
       </div>
     </section>
   );

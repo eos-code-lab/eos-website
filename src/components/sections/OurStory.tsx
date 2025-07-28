@@ -27,28 +27,32 @@
 
     const OurStory = () => {
     return (
-        <section id="best-of" className="flex flex-col md:flex-row justify-between text-stone-500 py-16 mx-auto px-4">
-        <div className="w-full md:w-1/2 text-center md:text-left p-6 md:pr-12 flex flex-col justify-center">
-        <h2 className="text-center text-2xl font-bold text-black">
-            {ourStoryItem.title}
-            </h2>
-            <hr className="border-t-4 my-3 w-[5%] mx-auto green" />
-            <ul className="space-y-4 text-center">
-            {ourStoryItem.description.map((item) => (
-                <li key={item.id} className="text-base ml-8 mr-8">
+         <section id="our-story" className="py-16 bg-gray-50">
+            <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row">
+                <div className="w-full md:w-1/2 text-center md:text-left p-6 md:pr-12 flex flex-col justify-center">
+            <h2 className="text-3xl font-bold uppercase mb-2 text-black text-center">
+                {ourStoryItem.title}
+                </h2>
+                <hr className="border-t-4 my-3 w-[5%] mx-auto green" />
+                <ul className="space-y-4 text-center text-gray-600">
+                {ourStoryItem.description.map((item) => (
+                    <li key={item.id} className="text-base ml-8 mr-8">
                 {item.description}
-                </li>
-            ))}
-            </ul>
-        </div>
-
-        <div className="w-full md:w-1/2 relative min-h-[300px] md:min-h-[500px]">
+                    </li>
+                ))}
+                </ul>
+                </div>
+        <div className="w-full md:w-1/2 relative min-h-[300px] md:min-h-[500px] mt-20">
             <img
             src={ourStoryItem.image}
             alt="Our Story"
-            className="w-full"
+            className="object-contain"
+            sizes="(max-width: 768px) 100vw, 50vw"
             />
         </div>
+            </div>
+            </div>
         </section>
     );
     };
