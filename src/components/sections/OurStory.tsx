@@ -87,7 +87,7 @@ const OurStory = () => {
             >
               {ourStoryItem.title}
             </motion.h2>
-            <motion.hr className="border-t-4 my-3 w-[5%] mx-auto border-green-500" variants={textVariants}/>
+            <motion.hr className="border-t-4 my-3 w-[5%] mx-auto green" variants={textVariants}/>
             <motion.ul className="space-y-4 text-center text-gray-600" variants={textVariants}>
               {ourStoryItem.description.map((item) => (
                 <motion.li
@@ -101,7 +101,7 @@ const OurStory = () => {
             </motion.ul>
           </motion.div>
           <motion.div
-            className="w-full md:w-1/2 relative min-h-[300px] md:min-h-[500px] mt-30"
+            className="w-full md:w-1/2 flex items-center justify-center relative min-h-[300px] md:min-h-[500px]"
             variants={imageVariants}
             initial="hidden"
             animate={isInView ? 'visible' : 'hidden'}

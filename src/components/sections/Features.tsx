@@ -106,30 +106,29 @@ const Features = () => {
   };
 
   return (
-    <section id="features" className="py-16 bg-white" ref={sectionRef}>
-         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row">
-          <motion.div 
-            className="hidden md:block w-full md:w-1/2 relative min-h-[400px] mt-20"
-            variants={imageVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-          >
-            <img
-              src={featureItems.image}
-              alt="Our Features"
-              className="object-contain"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            </motion.div>
-      
+<section id="features" className="py-16 bg-white" ref={sectionRef}>
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col md:flex-row">
+      <motion.div 
+        className="hidden md:block w-full md:w-1/2 flex items-center justify-center relative min-h-[400px]"
+        variants={imageVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+      >
+        <img
+          src={featureItems.image}
+          alt="Our Features"
+          className="object-contain"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+      </motion.div>
 
-          <motion.div 
-            className="w-full md:w-1/2 p-4"
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-          >
+      <motion.div 
+        className="w-full md:w-1/2 p-4"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {featureItems.items.map((item) => (
             <motion.div 
@@ -137,22 +136,23 @@ const Features = () => {
               className="text-center"
               variants={itemVariants}
             >
-             <div className="flex-shrink-0 mr-4 text-green-500 green">
+              <div className="flex-shrink-0 mr-4 green">
                 <span className="mt-1">
-                 <i className={`fas ${item.icon} fa-2x`}></i>
+                  <i className={`fas ${item.icon} fa-2x`}></i>
                 </span>
-            <div>
-                <h4 className="ttext-center font-bold text-black">{item.title}</h4>
-              <p className="text-sm text-stone-500">{item.description}</p>
-            </div>
-            </div>
+                <div>
+                  <h4 className="text-center font-bold text-black">{item.title}</h4>
+                  <p className="text-sm text-stone-500">{item.description}</p>
+                </div>
+              </div>
             </motion.div>
           ))}
-          </div>
-        </motion.div>
         </div>
-        </div>
-      </section>
+      </motion.div>
+    </div>
+  </div>
+</section>
+
   );
 };
 
