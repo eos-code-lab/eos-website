@@ -1,4 +1,18 @@
-import '@fortawesome/fontawesome-free/css/all.min.css';
+'use client'
+
+import { motion, useInView, Variants } from 'framer-motion';
+import { useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faUsers, 
+  faCubes, 
+  faExpandArrowsAlt, 
+  faCode,
+  faRing
+} from '@fortawesome/free-solid-svg-icons';
+import { 
+  faDrupal
+} from '@fortawesome/free-brands-svg-icons';
 
 const featureItems = {
   image: '/images/services/our-features.png',
@@ -49,26 +63,79 @@ const featureItems = {
 };
 
 const Features = () => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
+
+  // Animation variants
+  const imageVariants: Variants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        type: "spring",
+        stiffness: 100,
+        damping: 15
+      }
+    }
+  };
+
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+        duration: 0.5
+      }
+    }
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <section id="features" className="py-16 bg-white">
+    <section id="features" className="py-16 bg-white" ref={sectionRef}>
          <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row">
-            <div className='hidden md:block w-full md:w-1/2 relative min-h-[400px] mt-30'>  
+          <motion.div 
+            className="hidden md:block w-full md:w-1/2 relative min-h-[400px] mt-20"
+            variants={imageVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+          >
             <img
               src={featureItems.image}
               alt="Our Features"
               className="object-contain"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
-            </div>
+            </motion.div>
       
 
-        <div className="w-full md:w-1/2 p-4">
+          <motion.div 
+            className="w-full md:w-1/2 p-4"
+            variants={containerVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+          >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {featureItems.items.map((item) => (
-            <div 
+            <motion.div 
               key={item.id}
               className="text-center"
+              variants={itemVariants}
             >
              <div className="flex-shrink-0 mr-4 text-green-500 green">
                 <span className="mt-1">
@@ -79,10 +146,10 @@ const Features = () => {
               <p className="text-sm text-stone-500">{item.description}</p>
             </div>
             </div>
-            </div>
+            </motion.div>
           ))}
           </div>
-        </div>
+        </motion.div>
         </div>
         </div>
       </section>
