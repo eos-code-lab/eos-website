@@ -101,7 +101,7 @@ const Services = () => {
       <hr className="border-t-4 my-6 w-[3%] mx-auto mov" />
       </motion.div>
     <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}

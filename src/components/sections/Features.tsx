@@ -108,28 +108,33 @@ const Features = () => {
   return (
 <section id="features" className="py-16 bg-white" ref={sectionRef}>
   <div className="container mx-auto px-4">
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col lg:flex-row items-stretch">
+      
       <motion.div 
-        className="hidden md:block w-full md:w-1/2 flex items-center justify-center relative min-h-[400px]"
+        className="hidden lg:flex w-full lg:w-1/2 items-center justify-center relative"
         variants={imageVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <img
-          src={featureItems.image}
-          alt="Our Features"
-          className="object-contain"
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
+        <div className="w-full">
+          <div className="relative h-full flex items-center justify-center">
+            <img
+              src={featureItems.image}
+              alt="Our Features"
+              className="object-contain max-h-[50%]"
+              style={{ maxHeight: "50%" }}
+            />
+          </div>
+        </div>
       </motion.div>
 
       <motion.div 
-        className="w-full md:w-1/2 p-4"
+        className="w-full lg:w-1/2 p-4 flex flex-col justify-center"
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {featureItems.items.map((item) => (
             <motion.div 
               key={item.id}
@@ -152,6 +157,7 @@ const Features = () => {
     </div>
   </div>
 </section>
+
 
   );
 };

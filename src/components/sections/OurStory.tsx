@@ -82,17 +82,17 @@ const OurStory = () => {
             animate={isInView ? 'visible' : 'hidden'}
           >
             <motion.h2
-              className="text-3xl font-bold uppercase mb-2 text-black text-center"
+              className="text-3xl font-bold uppercase mb-2 text-black"
               variants={textVariants}
             >
               {ourStoryItem.title}
             </motion.h2>
-            <motion.hr className="border-t-4 my-3 w-[5%] mx-auto green" variants={textVariants}/>
-            <motion.ul className="space-y-4 text-center text-gray-600" variants={textVariants}>
+            <motion.hr className="border-t-4 my-3 w-[10%] green" variants={textVariants}/>
+            <motion.ul className="space-y-4 text-gray-600" variants={textVariants}>
               {ourStoryItem.description.map((item) => (
                 <motion.li
                   key={item.id}
-                  className="text-base ml-8 mr-8"
+                  className="text-base mr-8"
                   variants={textVariants}
                 >
                   {item.description}
