@@ -3,8 +3,10 @@
 
 import '@/styles/global.css';
 import '@/styles/style.css';
+import Image from 'next/image';
 import { motion, useInView, Variants } from "motion/react";
 import { useRef } from 'react';
+import ColoredLine from '@/components/ui/ColoredLine';
 
 
 const serviceItems = [
@@ -49,80 +51,86 @@ const serviceItems = [
 ];
 
 const Services = () => {
-    const sectionRef = useRef(null);
-    const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
 
-    // Animation variants
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.3,
-                delayChildren: 0.2,
-                duration: 0.5
-            }
-        }
-    };
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+        duration: 0.5
+      }
+    }
+  };
 
-    const itemVariants: Variants = {
-        hidden: { y: 50, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                type: 'spring',
-                stiffness: 100,
-                damping: 12
-            }
-        }
-    };
+  const itemVariants: Variants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+        damping: 12
+      }
+    }
+  };
 
-    const titleVariants: Variants = {
-        hidden: { y: -20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut"
-            }
-        }
-    };  
+  const titleVariants: Variants = {
+    hidden: { y: -20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
   return (
     <section id="services" className="py-16 px-4 bg-white" ref={sectionRef}>
-    <div className="container mx-auto">
-      <motion.div
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        variants={titleVariants}
-      >
-      <h2 className="text-3xl font-bold text-center uppercase mb-2 text-black">Services</h2>
-      <hr className="border-t-4 my-6 w-[3%] mx-auto mov" />
-      </motion.div>
-    <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
-        variants={containerVariants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-    >    
-      {serviceItems.map((item) => (
+      <div className="container mx-auto">
         <motion.div
-          key={item.id}
-          className="flex flex-col items-center text-stone-500"
-          variants={itemVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={titleVariants}
         >
-          <img
-            src={item.image}
-            alt={`${item.title} image`}
-            className=" mx-auto"
-          />
-          <h4 className={`font-bold text-2xl ${item.color}`}>{item.title}</h4>
-          <p>{item.description}</p>
+          <h2 className="text-3xl font-bold text-center uppercase mb-2 text-black">Services</h2>
+          <ColoredLine color="mov" width="[3%]" />
         </motion.div>
-      ))}
-      </motion.div>  
-    </div>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          {serviceItems.map((item) => (
+            <motion.div
+              key={item.id}
+              className="flex flex-col items-center text-stone-500"
+              variants={itemVariants}
+            >
+              <div className="relative w-40 h-40 mb-4">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <div className="text-center">
+                <h3 className={`font-bold text-2xl ${item.color}`}>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 };
