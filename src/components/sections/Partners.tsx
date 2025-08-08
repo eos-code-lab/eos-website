@@ -2,6 +2,7 @@
 
 import { motion, useInView, Variants } from 'framer-motion';
 import { useRef } from 'react';
+import ColoredLine from '@/components/ui/ColoredLine';
 
 const partnerItem = {
   title: 'OUR PARTNERS',
@@ -67,7 +68,7 @@ const Partners = () => {
       <h2 className="text-2xl md:text-2xl font-bold text-black mb-2">
         {partnerItem.title}
       </h2>
-      <hr className="border-t-4 w-[3%] mx-auto my-4 mov" />
+      <ColoredLine color="mov" width="[3%]" animate={true} variants={itemVariants} />
       </motion.div>
 
       <motion.div

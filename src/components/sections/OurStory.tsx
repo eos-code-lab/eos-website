@@ -2,6 +2,7 @@
 
 import { motion, useInView, Variants } from 'framer-motion';
 import { useRef } from 'react';
+import ColoredLine from '@/components/ui/ColoredLine';
 
 const ourStoryItem = {
   id: 1,
@@ -87,7 +88,9 @@ const OurStory = () => {
             >
               {ourStoryItem.title}
             </motion.h2>
-            <motion.hr className="border-t-4 my-3 w-[10%] green" variants={textVariants}/>
+            
+            <ColoredLine color="green" width="[10%]" animate={true} variants={textVariants} className="ml-0 mr-auto"/>
+            
             <motion.ul className="space-y-4 text-gray-600" variants={textVariants}>
               {ourStoryItem.description.map((item) => (
                 <motion.li

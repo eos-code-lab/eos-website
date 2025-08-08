@@ -5,6 +5,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import ColoredLine from '@/components/ui/ColoredLine';
 
 // Define the carousel items
 const carouselItems = [
@@ -102,7 +103,7 @@ const HeroCarousel = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold uppercase mb-4">
               {item.title}
             </h1>
-            <hr className={`border-t-4 w-[5%] mx-auto my-2 ${item.lineColor}`} />
+            <ColoredLine color={item.lineColor} width="[5%]" />
             <h5 className="text-lg md:text-xl lg:text-2xl">
               {item.subtitle}
             </h5>
