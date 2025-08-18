@@ -1,19 +1,19 @@
 // Services section
-'use client'
+"use client";
 
-import '@/styles/global.css';
-import '@/styles/style.css';
-import Image from 'next/image';
+import "@/styles/global.css";
+import "@/styles/style.css";
+import Image from "next/image";
 import { motion, useInView, Variants } from "motion/react";
-import { useRef } from 'react';
-import ColoredLine from '@/components/ui/ColoredLine';
-
+import { useRef } from "react";
+import ColoredLine from "@/components/ui/ColoredLine";
+import ServiceCard from "../ui/ServiceCard";
 
 const serviceItems = [
   {
     id: 1,
-    image: '/images/services/web-design.png',
-    title: 'WEB DESIGN & UI',
+    image: "/images/services/web-design.png",
+    title: "WEB DESIGN & UI",
     description: `Imagination is the best thing we have and we are not afraid to use it in
     your advantage. We offer creative design solutions that enhance user experience and enrich
     the value of your brand. Our analysts and UX/UI designers work with you closely in order
@@ -21,12 +21,12 @@ const serviceItems = [
     We deliver ready to use and intuitive design services for websites, brand logos, eCommerce
     stores and enterprise software. Let us help you harness the "power of UX/UI design services"
     and create experiences that your customers will love!`,
-    color: 'green'
+    color: "green",
   },
   {
     id: 2,
-    image: '/images/services/development.png',
-    title: 'DEVELOPMENT',
+    image: "/images/services/development.png",
+    title: "DEVELOPMENT",
     description: `We’ve always been fans of space exploration and we like to think of it in our
     daily business. We offer custom software development services out of this world and help you
     maximise business opportunities with bespoke software solutions. We know the technologies
@@ -35,19 +35,19 @@ const serviceItems = [
     software maintenance. We transform products and services through software innovation,
     build web platforms that leverage latest technologies (machine learning, IoT, blockchain)
     and help companies execute big ideas at the speed of light.`,
-    color: 'mov'
+    color: "mov",
   },
   {
     id: 3,
-    image: '/images/services/consulting.png',
-    title: 'CONSULTING',
+    image: "/images/services/consulting.png",
+    title: "CONSULTING",
     description: `They say we are only as good as the promises we keep and we couldn't agree more when we
     are talking about consultancy. We can offer you IT consultancy on demand and assure you
     this is the best way to get exactly the expertise you need without hiring a permanent team.
     Our IT consultants work carefully with you in order to maximise the effectiveness and
     business impact of your project, helping you meet business objectives and fix problems.`,
-    color: 'blue'
-  }
+    color: "blue",
+  },
 ];
 
 const Services = () => {
@@ -62,9 +62,9 @@ const Services = () => {
       transition: {
         staggerChildren: 0.3,
         delayChildren: 0.2,
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
 
   const itemVariants: Variants = {
@@ -73,11 +73,11 @@ const Services = () => {
       y: 0,
       opacity: 1,
       transition: {
-        type: 'spring',
+        type: "spring",
         stiffness: 100,
-        damping: 12
-      }
-    }
+        damping: 12,
+      },
+    },
   };
 
   const titleVariants: Variants = {
@@ -87,9 +87,9 @@ const Services = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
   return (
     <section id="services" className="py-16 px-4 bg-white" ref={sectionRef}>
@@ -99,7 +99,9 @@ const Services = () => {
           animate={isInView ? "visible" : "hidden"}
           variants={titleVariants}
         >
-          <h2 className="text-3xl font-bold text-center uppercase mb-2 text-black">Services</h2>
+          <h2 className="text-3xl font-bold text-center uppercase mb-2 text-black">
+            Services
+          </h2>
           <ColoredLine color="mov" width="[3%]" />
         </motion.div>
         <motion.div
@@ -109,25 +111,15 @@ const Services = () => {
           animate={isInView ? "visible" : "hidden"}
         >
           {serviceItems.map((item) => (
-            <motion.div
+            <ServiceCard
               key={item.id}
-              className="flex flex-col items-center text-stone-500"
+              id={item.id}
+              image={item.image}
+              title={item.title}
+              description={item.description}
+              color={item.color}
               variants={itemVariants}
-            >
-              <div className="relative w-40 h-40 mb-4">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-              <div className="text-center">
-                <h3 className={`font-bold text-2xl ${item.color}`}>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
-            </motion.div>
+            />
           ))}
         </motion.div>
       </div>

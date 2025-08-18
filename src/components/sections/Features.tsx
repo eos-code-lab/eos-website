@@ -13,6 +13,7 @@ import {
 import { 
   faDrupal
 } from '@fortawesome/free-brands-svg-icons';
+import FeatureCard from '../ui/FeatureCard';
 
 const featureItems = {
   image: '/images/services/our-features.png',
@@ -134,25 +135,19 @@ const Features = () => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {featureItems.items.map((item) => (
-            <motion.div 
-              key={item.id}
-              className="text-center"
-              variants={itemVariants}
-            >
-              <div className="flex-shrink-0 mr-4 green">
-                <span className="mt-1">
-                  <i className={`fas ${item.icon} fa-2x`}></i>
-                </span>
-                <div>
-                  <h4 className="text-center font-bold text-black">{item.title}</h4>
-                  <p className="text-sm text-stone-500">{item.description}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+  {featureItems.items.map((item) => (
+    <FeatureCard 
+      key={item.id}
+      id={item.id}
+      icon={item.icon}
+      title={item.title}
+      description={item.description}
+      variants={itemVariants}
+    />
+  ))}
+</div>
+
       </motion.div>
     </div>
   </div>
